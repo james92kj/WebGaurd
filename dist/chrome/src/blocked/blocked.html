@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Blocked — WebGuard</title>
+    <link rel="stylesheet" href="blocked.css">
+</head>
+<body>
+    <div class="container">
+        <div class="shield-icon">
+            <svg viewBox="0 0 64 64" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 4L8 16v16c0 14.4 10.24 27.84 24 32 13.76-4.16 24-17.6 24-32V16L32 4z" fill="#3B82F6" opacity="0.15"/>
+                <path d="M32 4L8 16v16c0 14.4 10.24 27.84 24 32 13.76-4.16 24-17.6 24-32V16L32 4z" stroke="#3B82F6" stroke-width="2.5" fill="none"/>
+                <path d="M22 32l7 7 13-13" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <h1>This site is currently blocked</h1>
+
+        <div class="quote-box" id="quoteBox">
+            <p class="quote-text" id="quoteText"></p>
+            <p class="quote-author" id="quoteAuthor"></p>
+        </div>
+
+        <div class="countdown-section">
+            <p class="countdown-label">Next allowed window opens in:</p>
+            <div class="countdown-timer" id="countdownTimer">--:--:--</div>
+            <p class="countdown-detail" id="countdownDetail"></p>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-primary" id="saveUrlBtn">Save URL for Later</button>
+            <button class="btn btn-secondary" id="goBackBtn">Go Back</button>
+        </div>
+
+        <div class="saved-message" id="savedMessage">
+            URL saved! You can access it from the WebGuard popup.
+        </div>
+
+        <p class="blocked-url" id="blockedUrl"></p>
+    </div>
+
+    <script src="../../vendor/browser-polyfill.min.js"></script>
+    <script src="../shared/constants.js"></script>
+    <script src="../shared/time-utils.js"></script>
+    <script src="../shared/browser-compat.js"></script>
+    <script src="../background/storage.js"></script>
+    <script src="quotes.js"></script>
+    <script src="blocked.js"></script>
+</body>
+</html>

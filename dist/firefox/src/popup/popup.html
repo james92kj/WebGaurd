@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGuard</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <svg viewBox="0 0 64 64" width="20" height="20" fill="none">
+                    <path d="M32 4L8 16v16c0 14.4 10.24 27.84 24 32 13.76-4.16 24-17.6 24-32V16L32 4z" fill="#3B82F6" opacity="0.3"/>
+                    <path d="M32 4L8 16v16c0 14.4 10.24 27.84 24 32 13.76-4.16 24-17.6 24-32V16L32 4z" stroke="#3B82F6" stroke-width="3" fill="none"/>
+                </svg>
+                <span class="header-title">WebGuard</span>
+            </div>
+            <div class="header-right">
+                <label class="toggle">
+                    <input type="checkbox" id="masterToggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="status" id="statusBar">
+            <span class="status-dot active"></span>
+            <span class="status-text" id="statusText">Protection active</span>
+        </div>
+
+        <!-- Add Site -->
+        <div class="add-site">
+            <input type="text" id="domainInput" placeholder="Enter domain (e.g. reddit.com)" spellcheck="false">
+            <button id="addSiteBtn" class="btn-add">Add</button>
+        </div>
+
+        <!-- Blocked Sites List -->
+        <div class="section">
+            <div class="section-header">
+                <span>Blocked Sites</span>
+                <span class="count" id="sitesCount">0</span>
+            </div>
+            <div class="list" id="sitesList">
+                <div class="empty-state" id="sitesEmpty">No sites blocked yet</div>
+            </div>
+        </div>
+
+        <!-- Saved URLs -->
+        <div class="section">
+            <div class="section-header">
+                <span>Saved URLs</span>
+                <span class="count" id="savedCount">0</span>
+            </div>
+            <div class="list" id="savedList">
+                <div class="empty-state" id="savedEmpty">No saved URLs</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <a href="#" id="openOptions">Settings</a>
+        </div>
+    </div>
+
+    <script src="../../vendor/browser-polyfill.min.js"></script>
+    <script src="../shared/constants.js"></script>
+    <script src="../shared/time-utils.js"></script>
+    <script src="../shared/browser-compat.js"></script>
+    <script src="../background/storage.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

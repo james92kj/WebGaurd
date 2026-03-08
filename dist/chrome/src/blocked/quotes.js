@@ -1,0 +1,37 @@
+/* global WebGuard */
+var WebGuard = WebGuard || {};
+
+WebGuard.Quotes = [
+    { text: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+    { text: "It is not enough to be busy. The question is: what are we busy about?", author: "Henry David Thoreau" },
+    { text: "Focus on being productive instead of busy.", author: "Tim Ferriss" },
+    { text: "You will never find time for anything. If you want time you must make it.", author: "Charles Buxton" },
+    { text: "The key is not to prioritize what's on your schedule, but to schedule your priorities.", author: "Stephen Covey" },
+    { text: "Action is the foundational key to all success.", author: "Pablo Picasso" },
+    { text: "Discipline is choosing between what you want now and what you want most.", author: "Abraham Lincoln" },
+    { text: "Your future is created by what you do today, not tomorrow.", author: "Robert Kiyosaki" },
+    { text: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+    { text: "Don't watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+    { text: "Until we can manage time, we can manage nothing else.", author: "Peter Drucker" },
+    { text: "Lost time is never found again.", author: "Benjamin Franklin" },
+    { text: "Time is what we want most, but what we use worst.", author: "William Penn" },
+    { text: "You may delay, but time will not.", author: "Benjamin Franklin" },
+    { text: "The bad news is time flies. The good news is you're the pilot.", author: "Michael Altshuler" },
+    { text: "Ordinary people think merely of spending time. Great people think of using it.", author: "Arthur Schopenhauer" },
+    { text: "It's not that I'm so smart, it's just that I stay with problems longer.", author: "Albert Einstein" },
+    { text: "Success is the sum of small efforts, repeated day in and day out.", author: "Robert Collier" },
+    { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+    { text: "Start where you are. Use what you have. Do what you can.", author: "Arthur Ashe" },
+    { text: "A year from now you may wish you had started today.", author: "Karen Lamb" },
+    { text: "Amateurs sit and wait for inspiration. The rest of us get up and go to work.", author: "Stephen King" },
+    { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb" },
+    { text: "Do the hard jobs first. The easy jobs will take care of themselves.", author: "Dale Carnegie" },
+    { text: "Productivity is being able to do things that you were never able to do before.", author: "Franz Kafka" },
+    { text: "Either you run the day or the day runs you.", author: "Jim Rohn" },
+    { text: "Nothing is less productive than to make more efficient what should not be done at all.", author: "Peter Drucker" },
+    { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
+    { text: "Concentrate all your thoughts upon the work in hand.", author: "Alexander Graham Bell" },
+    { text: "What we fear doing most is usually what we most need to do.", author: "Tim Ferriss" },
+    { text: "If you spend too much time thinking about a thing, you'll never get it done.", author: "Bruce Lee" },
+    { text: "Small disciplines repeated with consistency every day lead to great achievements.", author: "John C. Maxwell" }
+];

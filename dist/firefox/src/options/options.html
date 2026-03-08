@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGuard — Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-brand">
+                <svg viewBox="0 0 64 64" width="28" height="28" fill="none">
+                    <path d="M32 4L8 16v16c0 14.4 10.24 27.84 24 32 13.76-4.16 24-17.6 24-32V16L32 4z" fill="#3B82F6" opacity="0.2"/>
+                    <path d="M32 4L8 16v16c0 14.4 10.24 27.84 24 32 13.76-4.16 24-17.6 24-32V16L32 4z" stroke="#3B82F6" stroke-width="2.5" fill="none"/>
+                    <path d="M22 32l7 7 13-13" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1>WebGuard Settings</h1>
+            </div>
+            <div class="header-controls">
+                <label class="toggle-label">
+                    <span>Protection</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="masterToggle" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </label>
+            </div>
+        </header>
+
+        <!-- Blocked Sites Section -->
+        <section class="card">
+            <div class="card-header">
+                <h2>Blocked Sites</h2>
+                <span class="badge" id="sitesCount">0</span>
+            </div>
+
+            <div class="add-row">
+                <input type="text" id="domainInput" placeholder="Enter domain to block (e.g. reddit.com)" spellcheck="false">
+                <button id="addSiteBtn" class="btn btn-primary">Add Site</button>
+            </div>
+
+            <table class="table" id="sitesTable">
+                <thead>
+                    <tr>
+                        <th>Domain</th>
+                        <th>Subdomains</th>
+                        <th>Status</th>
+                        <th>Added</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="sitesBody">
+                </tbody>
+            </table>
+            <div class="empty-state" id="sitesEmpty">No blocked sites yet. Add a domain above to get started.</div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section class="card">
+            <div class="card-header">
+                <h2>Allowed Schedule</h2>
+            </div>
+            <p class="card-description">Set time windows when blocked sites are accessible. Outside these windows, sites are blocked.</p>
+
+            <div class="schedule-grid" id="scheduleGrid">
+                <!-- Filled by JS -->
+            </div>
+        </section>
+
+        <!-- Saved URLs Section -->
+        <section class="card">
+            <div class="card-header">
+                <h2>Saved URLs</h2>
+                <span class="badge" id="savedCount">0</span>
+            </div>
+
+            <table class="table" id="savedTable">
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Domain</th>
+                        <th>Saved</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="savedBody">
+                </tbody>
+            </table>
+            <div class="empty-state" id="savedEmpty">No saved URLs. When you visit a blocked site, you can save the URL for later.</div>
+
+            <div class="card-footer" id="savedFooter" style="display: none;">
+                <button id="clearSavedBtn" class="btn btn-danger-outline">Clear All Saved URLs</button>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section class="card">
+            <div class="card-header">
+                <h2>Preferences</h2>
+            </div>
+
+            <div class="setting-row">
+                <div class="setting-info">
+                    <span class="setting-label">Notifications</span>
+                    <span class="setting-desc">Show a notification when your allowed browsing window opens</span>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="notificationsToggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </section>
+    </div>
+
+    <script src="../../vendor/browser-polyfill.min.js"></script>
+    <script src="../shared/constants.js"></script>
+    <script src="../shared/time-utils.js"></script>
+    <script src="../shared/browser-compat.js"></script>
+    <script src="../background/storage.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>

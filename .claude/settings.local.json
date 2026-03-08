@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:developer.chrome.com)",
+      "Bash(/Users/jameskj/Workspace/07_Side_Projects/WebPlugins/WebGuard/build.sh)"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+    "manifest_version": 2,
+    "name": "WebGuard",
+    "version": "1.0.0",
+    "description": "Block distracting websites outside allowed time windows. Stay focused.",
+    "permissions": [
+        "storage",
+        "alarms",
+        "notifications",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "vendor/browser-polyfill.min.js",
+            "src/shared/constants.js",
+            "src/shared/time-utils.js",
+            "src/shared/browser-compat.js",
+            "src/background/storage.js",
+            "src/background/blocker.js",
+            "src/background/scheduler.js",
+            "src/background/notifications.js",
+            "src/background/background.js"
+        ]
+    },
+    "browser_action": {
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "src/icons/icon-16.png",
+            "32": "src/icons/icon-32.png",
+            "48": "src/icons/icon-48.png",
+            "128": "src/icons/icon-128.png"
+        }
+    },
+    "options_ui": {
+        "page": "src/options/options.html",
+        "open_in_tab": true
+    },
+    "web_accessible_resources": [
+        "src/blocked/blocked.html"
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "webguard@webguard.ext"
+        }
+    },
+    "icons": {
+        "16": "src/icons/icon-16.png",
+        "32": "src/icons/icon-32.png",
+        "48": "src/icons/icon-48.png",
+        "128": "src/icons/icon-128.png"
+    }
+}
